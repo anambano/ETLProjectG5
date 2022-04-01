@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{09C526EE-79EF-4FEB-A3DD-267C4CDBDE05}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{23B845CC-3E9D-4D15-AC2D-B145EABA2411}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -38,7 +38,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_ID"
-              DTS:DTSID="{2B7F3073-7588-4131-A41A-B8EF1187F427}"
+              DTS:DTSID="{A87F1B64-C301-49F8-AE31-6ACCFEA3ED68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_Name"
-              DTS:DTSID="{8BBE3234-DD02-4545-8E27-4B26574DEED5}"
+              DTS:DTSID="{44E73B9B-FE22-439F-85EF-D1624020A4F3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
