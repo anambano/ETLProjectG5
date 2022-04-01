@@ -1,0 +1,2804 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/31/2022 11:02:43 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSSQL-22"
+  DTS:CreatorName="WIN\anambano"
+  DTS:DTSID="{C201A8AB-3617-4606-B806-FA0B4BC69069}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{A9B6A975-73A8-40F8-B764-AD2527CCA606}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CountriesCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D7AB3F85-7E23-4122-8D79-E5C1CB2F013E}"
+      DTS:ObjectName="CountriesCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\ETLProjectG5\countries.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country_ID"
+              DTS:DTSID="{2816CB4A-CF34-4095-A1B2-42B7020759D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country_Name"
+              DTS:DTSID="{76595945-1595-4F1A-880B-4FA4D03C8A98}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4BAD0FFB-C64B-4E45-998E-1C2EA413F386}"
+      DTS:ObjectName="localhost.ETLProjectG5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ETLProjectG5;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WHR2021CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{85B83311-9FC0-42F3-93D1-C2B4F9A13779}"
+      DTS:ObjectName="WHR2021CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\ETLProjectG5\world-happiness-report-2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country name"
+              DTS:DTSID="{C489BFD1-DD33-4435-B728-7B8768898661}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Regional indicator"
+              DTS:DTSID="{D7389B30-B79E-4AE9-A508-E0664EED749C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ladder score"
+              DTS:DTSID="{2FBC1B55-6CF8-4874-8ED3-6859AD7EB882}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Standard error of ladder score"
+              DTS:DTSID="{F9E26D74-67EB-40F8-98D0-7AB200980059}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="upperwhisker"
+              DTS:DTSID="{959ED962-F3DB-42A8-9285-38B8AC803F24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lowerwhisker"
+              DTS:DTSID="{898866B2-629E-46C5-8427-4A3A818AC258}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Logged GDP per capita"
+              DTS:DTSID="{3C0CEB85-AADE-4AD0-91AD-68FE44AB23D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Social support"
+              DTS:DTSID="{0CCCD466-EC2F-4F99-B422-A1686379D7B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Healthy life expectancy"
+              DTS:DTSID="{931FE4D3-8517-4C57-A658-1E4DCA4BB9BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Freedom to make life choices"
+              DTS:DTSID="{44FEAED1-DF20-4A32-A7B0-07649379C8FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Generosity"
+              DTS:DTSID="{C3F4DC4E-72B4-4AF5-B98D-F4173506464B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Perceptions of corruption"
+              DTS:DTSID="{B7EF5794-1528-4939-B0D5-AD319239627F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ladder score in Dystopia"
+              DTS:DTSID="{5C1E89CE-47F2-4676-80C8-C01928F79110}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Explained by  Log GDP per capita"
+              DTS:DTSID="{6945AE97-A277-44BC-A0E4-47FE2905B2EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Explained by  Social support"
+              DTS:DTSID="{8DDE704F-EFD3-49E4-9BB7-05C5412A407E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Explained by  Healthy life expectancy"
+              DTS:DTSID="{FCCA3FC6-8012-4C54-A9E6-C8C134327430}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Explained by  Freedom to make life choices"
+              DTS:DTSID="{F0C05247-8CCC-46FB-885B-62FE6761C767}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Explained by  Generosity"
+              DTS:DTSID="{9EEC5E37-497D-4164-855D-FE26C45477DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Explained by  Perceptions of corruption"
+              DTS:DTSID="{50466D0B-14AA-4C8E-B399-EBEEEB005278}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dystopia + residual"
+              DTS:DTSID="{B3D7355A-7BC2-49DE-AE55-407DF23C1ADE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WHRCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C86AEC53-928C-4048-AF1C-322B61E2A026}"
+      DTS:ObjectName="WHRCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\ETLProjectG5\world-happiness-report.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country name"
+              DTS:DTSID="{CDA3C7D8-4AEF-4AFB-B4B1-35FEBAC0FA48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{9B51F189-01E7-40C0-B17A-A3621102A29B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Life Ladder"
+              DTS:DTSID="{E1688106-B9E8-4CFE-916C-F1DC94DF8AF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Log GDP per capita"
+              DTS:DTSID="{38BDCA4B-7EC4-44E2-84B9-839BBE3B726B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Social support"
+              DTS:DTSID="{903EA6A3-D6DE-4113-A6DE-50E7E007ADB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Healthy life expectancy at birth"
+              DTS:DTSID="{7B4519B6-EC23-4B91-970E-FBBE350FCE2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Freedom to make life choices"
+              DTS:DTSID="{A4BD1277-1F95-4190-9FAB-B7E3E490C657}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Generosity"
+              DTS:DTSID="{D1EC569A-4CEC-4148-862B-1915FC9E4B08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Perceptions of corruption"
+              DTS:DTSID="{36CD6C1B-0EBF-45B0-BFA3-A1412D3AF869}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Positive affect"
+              DTS:DTSID="{49FC2FF2-FD90-4ADF-A09C-37D3D32F45C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Negative affect"
+              DTS:DTSID="{BC5AE4F6-9740-423E-8669-B3DCB69A4810}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clean All Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EF036D66-8BBE-42E2-B83D-1091DC1EE5A3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean All Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4BAD0FFB-C64B-4E45-998E-1C2EA413F386}"
+          SQLTask:SqlStatementSource="delete from Countries;&#xA;delete from HappinessIndex;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Countries"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9EE2233D-8877-4AA6-9328-3581EFDB62C4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Countries"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Countries\Country Loader"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Country Loader"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Countries\Country Loader.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CountriesCSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[CountriesCSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].Columns[Country_ID]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].ExternalColumns[Country_ID]"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].Columns[Country_ID]"
+                      name="Country_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].Columns[Country_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].ExternalColumns[Country_Name]"
+                      length="50"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].Columns[Country_Name]"
+                      name="Country_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].ExternalColumns[Country_ID]"
+                      dataType="ui2"
+                      name="Country_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].ExternalColumns[Country_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country_Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Countries\Country OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Country OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Countries]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Countries\Country OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country_Name"
+                      externalMetadataColumnId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_Name]"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].Columns[Country_Name]" />
+                    <inputColumn
+                      refId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country_ID]"
+                      cachedDataType="ui2"
+                      cachedName="Country_ID"
+                      externalMetadataColumnId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      lineageId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output].Columns[Country_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Country_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      dataType="i4"
+                      name="Country_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Countries\Country OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Countries\Country OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Countries\Country OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Countries\Country OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Countries\Country OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Countries.Paths[Flat File Source Output]"
+              endId="Package\Extract Countries\Country OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Countries\Country Loader.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Happiness Index"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7D4366D3-6382-4970-8445-78EAAC6A71AD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Happiness Index"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Happiness Index\Country ID Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Country ID Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Countries]) as refTable</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from (select * from [dbo].[Countries]) as refTable) [refTable]
+where [refTable].[Country_Name] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Country_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Country_Name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Country name]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Happiness Index\Country ID Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Happiness Index\Country ID Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Country ID Lookup.Inputs[Lookup Input].Columns[Country name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country name"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Country name]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Country_Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Extract Happiness Index\Country ID Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      name="Country_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Country_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Extract Happiness Index\Country ID Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Extract Happiness Index\Country ID Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Happiness Index\Happiness Index Loader"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Happiness Index Loader"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Happiness Index\Happiness Index Loader.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[WHRCSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[WHRCSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Country name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Country name]"
+                      length="50"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Country name]"
+                      name="Country name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[year]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Life Ladder]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Life Ladder]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Life Ladder]"
+                      name="Life Ladder"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Log GDP per capita]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Log GDP per capita]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Log GDP per capita]"
+                      name="Log GDP per capita"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Social support]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Social support]"
+                      name="Social support"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy at birth]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy at birth]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy at birth]"
+                      name="Healthy life expectancy at birth"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
+                      name="Freedom to make life choices"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Generosity]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Generosity]"
+                      name="Generosity"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
+                      name="Perceptions of corruption"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Positive affect]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Positive affect]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Positive affect]"
+                      name="Positive affect"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Negative affect]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Negative affect]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Negative affect]"
+                      name="Negative affect"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Country name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Country name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[year]"
+                      dataType="i4"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Life Ladder]"
+                      dataType="numeric"
+                      name="Life Ladder"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Log GDP per capita]"
+                      dataType="numeric"
+                      name="Log GDP per capita"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
+                      dataType="numeric"
+                      name="Social support"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy at birth]"
+                      dataType="numeric"
+                      name="Healthy life expectancy at birth"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
+                      dataType="numeric"
+                      name="Freedom to make life choices"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
+                      dataType="numeric"
+                      name="Generosity"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
+                      dataType="numeric"
+                      name="Perceptions of corruption"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Positive affect]"
+                      dataType="numeric"
+                      name="Positive affect"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Negative affect]"
+                      dataType="numeric"
+                      name="Negative affect"
+                      precision="18" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Happiness Index\Happiness OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Happiness OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HappinessIndex]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Generosity]"
+                      cachedDataType="numeric"
+                      cachedName="Generosity"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Generosity]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assessment_Year]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Life Ladder]"
+                      cachedDataType="numeric"
+                      cachedName="Life Ladder"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Life Ladder]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Log GDP per capita]"
+                      cachedDataType="numeric"
+                      cachedName="Log GDP per capita"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Log GDP per capita]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Social support]"
+                      cachedDataType="numeric"
+                      cachedName="Social support"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Social support]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Healthy life expectancy at birth]"
+                      cachedDataType="numeric"
+                      cachedName="Healthy life expectancy at birth"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy at birth]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Freedom to make life choices]"
+                      cachedDataType="numeric"
+                      cachedName="Freedom to make life choices"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Perceptions of corruption]"
+                      cachedDataType="numeric"
+                      cachedName="Perceptions of corruption"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Positive affect]"
+                      cachedDataType="numeric"
+                      cachedName="Positive affect"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Positive_affect]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Positive affect]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Negative affect]"
+                      cachedDataType="numeric"
+                      cachedName="Negative affect"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Negative_affect]"
+                      lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Negative affect]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country_ID]"
+                      cachedDataType="i4"
+                      cachedName="Country_ID"
+                      externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      lineageId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      dataType="i2"
+                      name="Country_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assessment_Year]"
+                      dataType="i2"
+                      name="Assessment_Year" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
+                      dataType="numeric"
+                      name="Life_Ladder"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
+                      dataType="numeric"
+                      name="Log_GDP_per_capita"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
+                      dataType="numeric"
+                      name="Social_support"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
+                      dataType="numeric"
+                      name="Healthy_life_expectancy_at_birth"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      dataType="numeric"
+                      name="Freedom_to_make_life_choices"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
+                      dataType="numeric"
+                      name="Generosity"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      dataType="numeric"
+                      name="Perceptions_of_corruption"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Positive_affect]"
+                      dataType="numeric"
+                      name="Positive_affect"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Negative_affect]"
+                      dataType="numeric"
+                      name="Negative_affect"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ladder_score_in_Dystopia]"
+                      dataType="numeric"
+                      name="Ladder_score_in_Dystopia"
+                      precision="10"
+                      scale="5" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index\Happiness OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index\Happiness OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Happiness Index.Paths[Flat File Source Output]"
+              endId="Package\Extract Happiness Index\Country ID Lookup.Inputs[Lookup Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract Happiness Index.Paths[Lookup Match Output]"
+              endId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Extract Happiness Index\Country ID Lookup.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Happiness Index 2021"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9BD42CEF-5F5B-4FF0-9671-4409E450D1EB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Happiness Index 2021"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Happiness Index 2021\Country Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Country Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select refTable.*, 2021 as AYear from (select * from [dbo].[Countries]) as refTable</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select refTable.*, 2021 as AYear from (select * from [dbo].[Countries]) as refTable) [refTable]
+where [refTable].[Country_Name] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Country_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Country_Name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Country name]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Happiness Index 2021\Country Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Happiness Index 2021\Country Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Country Lookup.Inputs[Lookup Input].Columns[Country name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country name"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Country name]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Country_Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Extract Happiness Index 2021\Country Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      name="Country_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Country_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]"
+                      name="AYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AYear</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Extract Happiness Index 2021\Country Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Extract Happiness Index 2021\Country Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Happiness 2021 OLE DB Dest"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HappinessIndex]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Generosity]"
+                      cachedDataType="numeric"
+                      cachedName="Generosity"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Generosity]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Country_ID]"
+                      cachedDataType="i4"
+                      cachedName="Country_ID"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Ladder score]"
+                      cachedDataType="numeric"
+                      cachedName="Ladder score"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Logged GDP per capita]"
+                      cachedDataType="numeric"
+                      cachedName="Logged GDP per capita"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Logged GDP per capita]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Social support]"
+                      cachedDataType="numeric"
+                      cachedName="Social support"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Social support]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Healthy life expectancy]"
+                      cachedDataType="numeric"
+                      cachedName="Healthy life expectancy"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Freedom to make life choices]"
+                      cachedDataType="numeric"
+                      cachedName="Freedom to make life choices"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Perceptions of corruption]"
+                      cachedDataType="numeric"
+                      cachedName="Perceptions of corruption"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Ladder score in Dystopia]"
+                      cachedDataType="numeric"
+                      cachedName="Ladder score in Dystopia"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Ladder_score_in_Dystopia]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score in Dystopia]" />
+                    <inputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[AYear]"
+                      cachedDataType="i4"
+                      cachedName="AYear"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Assessment_Year]"
+                      lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      dataType="i2"
+                      name="Country_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Assessment_Year]"
+                      dataType="i2"
+                      name="Assessment_Year" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
+                      dataType="numeric"
+                      name="Life_Ladder"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
+                      dataType="numeric"
+                      name="Log_GDP_per_capita"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
+                      dataType="numeric"
+                      name="Social_support"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
+                      dataType="numeric"
+                      name="Healthy_life_expectancy_at_birth"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      dataType="numeric"
+                      name="Freedom_to_make_life_choices"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
+                      dataType="numeric"
+                      name="Generosity"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      dataType="numeric"
+                      name="Perceptions_of_corruption"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Positive_affect]"
+                      dataType="numeric"
+                      name="Positive_affect"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Negative_affect]"
+                      dataType="numeric"
+                      name="Negative_affect"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Ladder_score_in_Dystopia]"
+                      dataType="numeric"
+                      name="Ladder_score_in_Dystopia"
+                      precision="10"
+                      scale="5" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Happiness Index 2021 Loader"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[WHR2021CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[WHR2021CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Country name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Country name]"
+                      length="50"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Country name]"
+                      name="Country name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Regional indicator]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Regional indicator]"
+                      length="50"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Regional indicator]"
+                      name="Regional indicator"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score]"
+                      name="Ladder score"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Standard error of ladder score]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Standard error of ladder score]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Standard error of ladder score]"
+                      name="Standard error of ladder score"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[upperwhisker]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[upperwhisker]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[upperwhisker]"
+                      name="upperwhisker"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[lowerwhisker]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[lowerwhisker]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[lowerwhisker]"
+                      name="lowerwhisker"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Logged GDP per capita]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Logged GDP per capita]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Logged GDP per capita]"
+                      name="Logged GDP per capita"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Social support]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Social support]"
+                      name="Social support"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy]"
+                      name="Healthy life expectancy"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
+                      name="Freedom to make life choices"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Generosity]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Generosity]"
+                      name="Generosity"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
+                      name="Perceptions of corruption"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score in Dystopia]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score in Dystopia]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score in Dystopia]"
+                      name="Ladder score in Dystopia"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Log GDP per capita]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Log GDP per capita]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Log GDP per capita]"
+                      name="Explained by  Log GDP per capita"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Social support]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Social support]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Social support]"
+                      name="Explained by  Social support"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Healthy life expectancy]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Healthy life expectancy]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Healthy life expectancy]"
+                      name="Explained by  Healthy life expectancy"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Freedom to make life choices]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Freedom to make life choices]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Freedom to make life choices]"
+                      name="Explained by  Freedom to make life choices"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Generosity]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Generosity]"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Generosity]"
+                      name="Explained by  Generosity"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Perceptions of corruption]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Perceptions of corruption]"
+                      length="50"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Perceptions of corruption]"
+                      name="Explained by  Perceptions of corruption"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Dystopia + residual]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Dystopia + residual]"
+                      length="50"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Dystopia + residual]"
+                      name="Dystopia + residual"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Country name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Country name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Regional indicator]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Regional indicator" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score]"
+                      dataType="numeric"
+                      name="Ladder score"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Standard error of ladder score]"
+                      dataType="numeric"
+                      name="Standard error of ladder score"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[upperwhisker]"
+                      dataType="numeric"
+                      name="upperwhisker"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[lowerwhisker]"
+                      dataType="numeric"
+                      name="lowerwhisker"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Logged GDP per capita]"
+                      dataType="numeric"
+                      name="Logged GDP per capita"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
+                      dataType="numeric"
+                      name="Social support"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy]"
+                      dataType="numeric"
+                      name="Healthy life expectancy"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
+                      dataType="numeric"
+                      name="Freedom to make life choices"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
+                      dataType="numeric"
+                      name="Generosity"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
+                      dataType="numeric"
+                      name="Perceptions of corruption"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score in Dystopia]"
+                      dataType="numeric"
+                      name="Ladder score in Dystopia"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Log GDP per capita]"
+                      dataType="numeric"
+                      name="Explained by  Log GDP per capita"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Social support]"
+                      dataType="numeric"
+                      name="Explained by  Social support"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Healthy life expectancy]"
+                      dataType="numeric"
+                      name="Explained by  Healthy life expectancy"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Freedom to make life choices]"
+                      dataType="numeric"
+                      name="Explained by  Freedom to make life choices"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Generosity]"
+                      dataType="numeric"
+                      name="Explained by  Generosity"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Perceptions of corruption]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Explained by  Perceptions of corruption" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Dystopia + residual]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Dystopia + residual" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Happiness Index 2021.Paths[Flat File Source Output]"
+              endId="Package\Extract Happiness Index 2021\Country Lookup.Inputs[Lookup Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract Happiness Index 2021.Paths[Lookup Match Output]"
+              endId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{58B005E7-EA82-4562-9F29-55DC444DF8F0}"
+      DTS:From="Package\Extract Countries"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract Happiness Index" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{55A18709-7FCA-4725-9AED-C09C09281A50}"
+      DTS:From="Package\Extract Happiness Index"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Extract Happiness Index 2021" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{3ADD107A-9B97-4358-9624-E502CA2E7E09}"
+      DTS:From="Package\Clean All Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Extract Countries" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Extract Countries"
+          TopLeft="245.000004172325,98.6470602070172" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="Package\Extract Happiness Index"
+          TopLeft="231.428575369777,180.470590766326" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Extract Happiness Index 2021"
+          TopLeft="214.285717934979,270.705886149489" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="326.214289771051,140.247060207017">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.2235305593088"
+              Start="0,0"
+              End="0,32.7235305593088">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.7235305593088" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="325.857146652378,222.070590766326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.6352953831631"
+              Start="0,0"
+              End="0,41.1352953831631">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.1352953831631" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Clean All Data"
+          TopLeft="240.714289813626,16.0588237546308" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="323.257146992975,57.6588237546308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.9882364523865"
+              Start="0,0"
+              End="0,33.4882364523865">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.4882364523865" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Countries">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Extract Countries\Country Loader"
+          TopLeft="45.7142864927955,16.8235296477084" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Extract Countries\Country OLE DB Destination"
+          TopLeft="37.1428577753963,105.529413244716" />
+        <EdgeLayout
+          Id="Package\Extract Countries.Paths[Flat File Source Output]"
+          TopLeft="121.628572134096,58.4235296477084">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.1058835970077"
+              Start="0,0"
+              End="0,39.6058835970077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.6058835970077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Countries\Country OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Happiness Index">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Extract Happiness Index\Happiness Index Loader"
+          TopLeft="71.4285716231987,60" />
+        <NodeLayout
+          Size="140,46.4"
+          Id="Package\Extract Happiness Index\Country ID Lookup"
+          TopLeft="101.428572134096,141.823530559309" />
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Extract Happiness Index\Happiness OLE DB Destination"
+          TopLeft="60,236.647061300938" />
+        <EdgeLayout
+          Id="Package\Extract Happiness Index.Paths[Flat File Source Output]"
+          TopLeft="168.228571878647,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.2235305593089"
+              Start="0,0"
+              End="0,32.7235305593089">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.7235305593089" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Happiness Index.Paths[Lookup Match Output]"
+          TopLeft="171.114286067048,188.223530559309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.4235307416291"
+              Start="0,0"
+              End="0,40.9235307416291">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.9235307416291" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.6570778708145,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Extract Happiness Index 2021">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="174.4,43.2"
+          Id="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader"
+          TopLeft="196.666666666667,41.6666666666667" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Extract Happiness Index 2021\Country Lookup"
+          TopLeft="206.666666836966,129.607844370597" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest"
+          TopLeft="198.809523846017,219.078433860682" />
+        <EdgeLayout
+          Id="Package\Extract Happiness Index 2021.Paths[Flat File Source Output]"
+          TopLeft="283.466666751816,84.8666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.74117770393"
+              Start="0,0"
+              End="0,37.24117770393">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.24117770393" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Happiness Index 2021.Paths[Lookup Match Output]"
+          TopLeft="283.538095341491,171.207844370597">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.870589490085"
+              Start="0,0"
+              End="0,40.370589490085">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.370589490085" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.3806072450425,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
