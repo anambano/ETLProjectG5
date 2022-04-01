@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="44"
-  DTS:VersionGUID="{23B845CC-3E9D-4D15-AC2D-B145EABA2411}">
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{67325DB5-716A-4A7B-A16C-3DD92BB20AAA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\countries.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\countries.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_ID"
-              DTS:DTSID="{A87F1B64-C301-49F8-AE31-6ACCFEA3ED68}"
+              DTS:DTSID="{E81B0344-733A-457E-9891-A133CD5029B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_Name"
-              DTS:DTSID="{44E73B9B-FE22-439F-85EF-D1624020A4F3}"
+              DTS:DTSID="{99E66456-ECB4-4B5F-B67D-00CEAD604C9D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -67,7 +67,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\HDI_Data.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\HDI_Data.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -76,7 +76,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country"
-              DTS:DTSID="{418E1293-961A-4D91-B9E3-39DA234FA45E}"
+              DTS:DTSID="{8A9D44A5-A7DE-4796-B07E-62A7E94729D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="hdi "
-              DTS:DTSID="{EE40223F-A10D-4FC4-A64B-500424E071EC}"
+              DTS:DTSID="{E001C18C-F5C1-49CB-9694-7B177577D8EB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -114,7 +114,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\world-happiness-report-2021.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\world-happiness-report-2021.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{814E849F-DA2E-4D24-883D-C714FD481494}"
+              DTS:DTSID="{17C983E2-D24F-4CE6-A31A-A123A799F8FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Regional indicator"
-              DTS:DTSID="{089D2A28-C908-42AB-9434-B643A9E049FE}"
+              DTS:DTSID="{8D2730BA-7512-41DD-81EB-84EF95D511CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score"
-              DTS:DTSID="{4C3DC93B-937D-4F2D-90DA-FE29E0A5AB8B}"
+              DTS:DTSID="{39B16BF6-D320-4249-9F09-5268AEE4F2FB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Standard error of ladder score"
-              DTS:DTSID="{68751D19-7B8B-404A-ABC5-8DFEF7A16CA6}"
+              DTS:DTSID="{E1089A05-5CD2-4A75-96CE-8112D5F3A116}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="upperwhisker"
-              DTS:DTSID="{0C954FC6-BF6D-4BAF-84BF-7D279D212699}"
+              DTS:DTSID="{57037A26-CEF2-4605-A401-7DC4C28CF319}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="lowerwhisker"
-              DTS:DTSID="{2D929201-80AC-4743-89FC-8C2E031B1E2E}"
+              DTS:DTSID="{4134639B-D161-42A7-92B9-A76E7F08B4BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Logged GDP per capita"
-              DTS:DTSID="{6D0CD11E-2085-4C2E-80A6-5577E551FA7B}"
+              DTS:DTSID="{58C85424-5411-4CC0-9007-F3566C704EE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,7 +186,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{5AFB2252-203F-455D-BB8B-224EE5995240}"
+              DTS:DTSID="{D5EBF730-12EF-46A5-928A-79966CA4ED0F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +195,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy"
-              DTS:DTSID="{1B470175-1BF0-487A-AEBA-A5EC3D82ECD8}"
+              DTS:DTSID="{DD5CBBBC-0EAE-4081-8210-DFD406A5B78B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -204,7 +204,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{88C9AEEE-E357-4F3F-A92C-7DBEBCC7AAE7}"
+              DTS:DTSID="{18BAFA09-976B-41BB-9BEC-4F8747D599E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -213,7 +213,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{4DC6C5A0-1111-4240-A300-0C6FEF86C18E}"
+              DTS:DTSID="{16931139-1298-4198-BC0C-9E242AF86953}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -222,7 +222,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{7EDB0C0D-251A-4E7D-9AF9-DDA959D97598}"
+              DTS:DTSID="{971712E5-D441-43AB-A322-1A39801AA773}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -231,7 +231,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score in Dystopia"
-              DTS:DTSID="{C3329561-AC16-45F1-BAED-0395F0247D3C}"
+              DTS:DTSID="{D8287E1A-E3A0-4B03-8418-BA8CE1D2495C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -240,7 +240,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Log GDP per capita"
-              DTS:DTSID="{72A7446F-8A81-44A9-A7BD-D0E7933D6420}"
+              DTS:DTSID="{AC8BC2F7-58C9-4D82-BB73-9FAF03309EE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -249,7 +249,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Social support"
-              DTS:DTSID="{1D2B0031-E7C6-4C10-9507-D426B1284121}"
+              DTS:DTSID="{127548CB-DF74-4B2B-8946-C67607EA1B81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -258,7 +258,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Healthy life expectancy"
-              DTS:DTSID="{F76107AE-B780-4AA8-B493-C592B9F6A1D8}"
+              DTS:DTSID="{F7A48EC1-ACF3-4150-AECF-5E87A6CCE5D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +267,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Freedom to make life choices"
-              DTS:DTSID="{B4810FD7-80FC-4F4C-A8A3-0DC5D7FE4FDE}"
+              DTS:DTSID="{C786BBC0-D6F3-4FAF-A4C2-470973A6F633}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -276,7 +276,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Generosity"
-              DTS:DTSID="{5AB56812-2BDC-4A9F-9150-9E114220E766}"
+              DTS:DTSID="{3541C73F-2D34-492F-A201-55E9B296C5E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -285,7 +285,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Perceptions of corruption"
-              DTS:DTSID="{78B7C81A-ECBA-4A17-B10A-083736FB4088}"
+              DTS:DTSID="{FD540094-25D7-40A4-A0E4-04C28EE7BCD1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -294,7 +294,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dystopia + residual"
-              DTS:DTSID="{61CB32E6-5624-44E8-86CD-23D25FF5C5C1}"
+              DTS:DTSID="{4D8130BA-105D-4614-8762-7A1075721D60}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -314,7 +314,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\world-happiness-report.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\world-happiness-report.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -323,7 +323,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{7383FFEF-8A09-4180-B2F7-FDB68D1C99F5}"
+              DTS:DTSID="{68A8EA37-D889-459A-BE16-CE13EFC6E3D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -331,7 +331,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="year"
-              DTS:DTSID="{B41CC06E-54CC-48FC-94B9-ABEC59885BE8}"
+              DTS:DTSID="{809633C2-EC31-4006-8A32-9C74DB37B588}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -340,7 +340,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Life Ladder"
-              DTS:DTSID="{0912A532-0F40-4658-92E5-DEAE88727894}"
+              DTS:DTSID="{28A3E249-1012-4BE3-B17F-60A8A1CFF1C9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -349,7 +349,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Log GDP per capita"
-              DTS:DTSID="{D5798153-7E1C-4294-B2EC-ACDF00F40E3B}"
+              DTS:DTSID="{FCEB53E3-231B-4AB9-BB3F-DBB18E76888B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -358,7 +358,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{D29F9F47-1372-40D6-BF8C-2AE073635B80}"
+              DTS:DTSID="{F884969B-B0CB-47EB-8935-D23EFA2B2CD6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -367,7 +367,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy at birth"
-              DTS:DTSID="{CEA1A95E-D278-4DAD-957D-EB8BB3ACBF79}"
+              DTS:DTSID="{0114A5F7-F986-4167-8F70-0F317BFA4B64}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -376,7 +376,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{7F336BA6-255E-451B-B610-5106F9CF18E3}"
+              DTS:DTSID="{17BF5D11-E6D4-4C26-948A-7A7882547D05}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -385,7 +385,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{615C4880-843D-40A4-A43E-1326FB6E207E}"
+              DTS:DTSID="{8971A896-4A18-4D62-8237-D6FD9B30F01A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -394,7 +394,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{E1C724D4-7325-4913-995E-A0C1DAEDD048}"
+              DTS:DTSID="{7178EA74-0E21-4A52-864A-624DB3AD51EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -403,7 +403,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Positive affect"
-              DTS:DTSID="{2341A1E0-1926-4B1D-A0D7-6BF3981E59CE}"
+              DTS:DTSID="{44B7C9D9-A299-43F6-A05F-53B6B7332EC5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -412,7 +412,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Negative affect"
-              DTS:DTSID="{FBCD3385-D9D5-4730-BDA1-66297ECF64E6}"
+              DTS:DTSID="{17305E77-E1B2-4ECD-8472-1FBD05892FEB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
