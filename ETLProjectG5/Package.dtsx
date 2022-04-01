@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{8C3A6110-4C83-4EA7-87EA-F1E22086BD89}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{09C526EE-79EF-4FEB-A3DD-267C4CDBDE05}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\ETLProjectG5\countries.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\countries.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_ID"
-              DTS:DTSID="{2816CB4A-CF34-4095-A1B2-42B7020759D2}"
+              DTS:DTSID="{2B7F3073-7588-4131-A41A-B8EF1187F427}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_Name"
-              DTS:DTSID="{76595945-1595-4F1A-880B-4FA4D03C8A98}"
+              DTS:DTSID="{8BBE3234-DD02-4545-8E27-4B26574DEED5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -67,7 +67,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\ETLProjectG5\HDI_Data.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\HDI_Data.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -76,7 +76,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country"
-              DTS:DTSID="{04F34506-1280-4077-ACC6-F8E85916143F}"
+              DTS:DTSID="{418E1293-961A-4D91-B9E3-39DA234FA45E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="hdi "
-              DTS:DTSID="{EC843451-958C-4477-88F5-7BCF167A651A}"
+              DTS:DTSID="{EE40223F-A10D-4FC4-A64B-500424E071EC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -114,7 +114,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\ETLProjectG5\world-happiness-report-2021.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\world-happiness-report-2021.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{C489BFD1-DD33-4435-B728-7B8768898661}"
+              DTS:DTSID="{814E849F-DA2E-4D24-883D-C714FD481494}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Regional indicator"
-              DTS:DTSID="{D7389B30-B79E-4AE9-A508-E0664EED749C}"
+              DTS:DTSID="{089D2A28-C908-42AB-9434-B643A9E049FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score"
-              DTS:DTSID="{2FBC1B55-6CF8-4874-8ED3-6859AD7EB882}"
+              DTS:DTSID="{4C3DC93B-937D-4F2D-90DA-FE29E0A5AB8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Standard error of ladder score"
-              DTS:DTSID="{F9E26D74-67EB-40F8-98D0-7AB200980059}"
+              DTS:DTSID="{68751D19-7B8B-404A-ABC5-8DFEF7A16CA6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="upperwhisker"
-              DTS:DTSID="{959ED962-F3DB-42A8-9285-38B8AC803F24}"
+              DTS:DTSID="{0C954FC6-BF6D-4BAF-84BF-7D279D212699}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="lowerwhisker"
-              DTS:DTSID="{898866B2-629E-46C5-8427-4A3A818AC258}"
+              DTS:DTSID="{2D929201-80AC-4743-89FC-8C2E031B1E2E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Logged GDP per capita"
-              DTS:DTSID="{3C0CEB85-AADE-4AD0-91AD-68FE44AB23D8}"
+              DTS:DTSID="{6D0CD11E-2085-4C2E-80A6-5577E551FA7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,7 +186,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{0CCCD466-EC2F-4F99-B422-A1686379D7B1}"
+              DTS:DTSID="{5AFB2252-203F-455D-BB8B-224EE5995240}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +195,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy"
-              DTS:DTSID="{931FE4D3-8517-4C57-A658-1E4DCA4BB9BA}"
+              DTS:DTSID="{1B470175-1BF0-487A-AEBA-A5EC3D82ECD8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -204,7 +204,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{44FEAED1-DF20-4A32-A7B0-07649379C8FB}"
+              DTS:DTSID="{88C9AEEE-E357-4F3F-A92C-7DBEBCC7AAE7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -213,7 +213,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{C3F4DC4E-72B4-4AF5-B98D-F4173506464B}"
+              DTS:DTSID="{4DC6C5A0-1111-4240-A300-0C6FEF86C18E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -222,7 +222,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{B7EF5794-1528-4939-B0D5-AD319239627F}"
+              DTS:DTSID="{7EDB0C0D-251A-4E7D-9AF9-DDA959D97598}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -231,7 +231,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score in Dystopia"
-              DTS:DTSID="{5C1E89CE-47F2-4676-80C8-C01928F79110}"
+              DTS:DTSID="{C3329561-AC16-45F1-BAED-0395F0247D3C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -240,7 +240,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Log GDP per capita"
-              DTS:DTSID="{6945AE97-A277-44BC-A0E4-47FE2905B2EB}"
+              DTS:DTSID="{72A7446F-8A81-44A9-A7BD-D0E7933D6420}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -249,7 +249,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Social support"
-              DTS:DTSID="{8DDE704F-EFD3-49E4-9BB7-05C5412A407E}"
+              DTS:DTSID="{1D2B0031-E7C6-4C10-9507-D426B1284121}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -258,7 +258,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Healthy life expectancy"
-              DTS:DTSID="{FCCA3FC6-8012-4C54-A9E6-C8C134327430}"
+              DTS:DTSID="{F76107AE-B780-4AA8-B493-C592B9F6A1D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +267,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Freedom to make life choices"
-              DTS:DTSID="{F0C05247-8CCC-46FB-885B-62FE6761C767}"
+              DTS:DTSID="{B4810FD7-80FC-4F4C-A8A3-0DC5D7FE4FDE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -276,7 +276,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Generosity"
-              DTS:DTSID="{9EEC5E37-497D-4164-855D-FE26C45477DA}"
+              DTS:DTSID="{5AB56812-2BDC-4A9F-9150-9E114220E766}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -285,7 +285,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Perceptions of corruption"
-              DTS:DTSID="{50466D0B-14AA-4C8E-B399-EBEEEB005278}"
+              DTS:DTSID="{78B7C81A-ECBA-4A17-B10A-083736FB4088}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -294,7 +294,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dystopia + residual"
-              DTS:DTSID="{B3D7355A-7BC2-49DE-AE55-407DF23C1ADE}"
+              DTS:DTSID="{61CB32E6-5624-44E8-86CD-23D25FF5C5C1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -314,7 +314,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\ETLProjectG5\world-happiness-report.csv">
+          DTS:ConnectionString="D:\ETLProjectG5\ETLProjectG5\world-happiness-report.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -323,7 +323,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{CDA3C7D8-4AEF-4AFB-B4B1-35FEBAC0FA48}"
+              DTS:DTSID="{7383FFEF-8A09-4180-B2F7-FDB68D1C99F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -331,7 +331,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="year"
-              DTS:DTSID="{9B51F189-01E7-40C0-B17A-A3621102A29B}"
+              DTS:DTSID="{B41CC06E-54CC-48FC-94B9-ABEC59885BE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -340,7 +340,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Life Ladder"
-              DTS:DTSID="{E1688106-B9E8-4CFE-916C-F1DC94DF8AF1}"
+              DTS:DTSID="{0912A532-0F40-4658-92E5-DEAE88727894}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -349,7 +349,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Log GDP per capita"
-              DTS:DTSID="{38BDCA4B-7EC4-44E2-84B9-839BBE3B726B}"
+              DTS:DTSID="{D5798153-7E1C-4294-B2EC-ACDF00F40E3B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -358,7 +358,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{903EA6A3-D6DE-4113-A6DE-50E7E007ADB7}"
+              DTS:DTSID="{D29F9F47-1372-40D6-BF8C-2AE073635B80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -367,7 +367,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy at birth"
-              DTS:DTSID="{7B4519B6-EC23-4B91-970E-FBBE350FCE2A}"
+              DTS:DTSID="{CEA1A95E-D278-4DAD-957D-EB8BB3ACBF79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -376,7 +376,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{A4BD1277-1F95-4190-9FAB-B7E3E490C657}"
+              DTS:DTSID="{7F336BA6-255E-451B-B610-5106F9CF18E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -385,7 +385,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{D1EC569A-4CEC-4148-862B-1915FC9E4B08}"
+              DTS:DTSID="{615C4880-843D-40A4-A43E-1326FB6E207E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -394,7 +394,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{36CD6C1B-0EBF-45B0-BFA3-A1412D3AF869}"
+              DTS:DTSID="{E1C724D4-7325-4913-995E-A0C1DAEDD048}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -403,7 +403,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Positive affect"
-              DTS:DTSID="{49FC2FF2-FD90-4ADF-A09C-37D3D32F45C4}"
+              DTS:DTSID="{2341A1E0-1926-4B1D-A0D7-6BF3981E59CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -412,7 +412,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Negative affect"
-              DTS:DTSID="{BC5AE4F6-9740-423E-8669-B3DCB69A4810}"
+              DTS:DTSID="{FBCD3385-D9D5-4730-BDA1-66297ECF64E6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -3130,13 +3130,6 @@ And Assessment_Year = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Team: ETL Group 5&#xA;Members: Anupama, Jyothshna, Kendrick, Prit"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="269.6,56"
-          Id="3cd7109f-4011-4cb0-b70f-541db9bd4dce"
-          TopLeft="472.857150909852,10.7058825030871" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="325.571432378828,312.305886149489">
@@ -3159,6 +3152,13 @@ And Assessment_Year = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Team: ETL Group 5&#xA;Members: Anupama, Jyothshna, Kendrick, Prit"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="269.6,56"
+          Id="3cd7109f-4011-4cb0-b70f-541db9bd4dce"
+          TopLeft="472.857150909852,10.7058825030871" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3275,7 +3275,9 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3354,7 +3356,9 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3366,41 +3370,17 @@ And Assessment_Year = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,41.6"
-          Id="Package\Extract HDI (Anupama)\HDI Flat File Source"
-          TopLeft="200.00000340598,23.7058826854072" />
+          Size="164.8,41.6"
+          Id="Package\Extract HDI (Anupama)\OLE DB Command"
+          TopLeft="197.14286050018,212.588238275587" />
         <NodeLayout
           Size="137.6,41.6"
           Id="Package\Extract HDI (Anupama)\Country Lookup"
           TopLeft="210.714289302729,117.658824483911" />
-        <EdgeLayout
-          Id="Package\Extract HDI (Anupama).Paths[Flat File Source Output]"
-          TopLeft="282.757146354354,65.3058826854072">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.3529417985038"
-              Start="0,0"
-              End="0,44.8529417985038">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.8529417985038" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,14.4264708992519,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Extract HDI (Anupama)\OLE DB Command"
-          TopLeft="197.14286050018,212.588238275587" />
+          Size="172,41.6"
+          Id="Package\Extract HDI (Anupama)\HDI Flat File Source"
+          TopLeft="200.00000340598,23.7058826854072" />
         <EdgeLayout
           Id="Package\Extract HDI (Anupama).Paths[Lookup Match Output]"
           TopLeft="279.528574901454,159.258824483911">
@@ -3425,6 +3405,28 @@ And Assessment_Year = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract HDI (Anupama).Paths[Flat File Source Output]"
+          TopLeft="282.757146354354,65.3058826854072">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.3529417985038"
+              Start="0,0"
+              End="0,44.8529417985038">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.8529417985038" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3434,7 +3436,7 @@ And Assessment_Year = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3444,7 +3446,7 @@ And Assessment_Year = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

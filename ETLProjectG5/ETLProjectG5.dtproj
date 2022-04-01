@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">MSSQL-22</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAglXD2OtxAkOUpRFwUeTmmwAAAAACAAAAAAADZgAAwAAAABAAAAAp7hY4nHXRiAzlByXSVHJ9AAAAAASAAACgAAAAEAAAABIzXt4gYtQfgSQAf4l0RKOIAAAAS2FUsFEMMlRaUkuUvrLLfVbX8MIEXoRznqkPYT41QBlyh7kzKGFy7msXKLYLGlG+CRg2tPF8xF0v0qswV4hERLWukZjddvpUtHDxYVpGRNvanpsR6xnTab9P4mb2m8ZlC3auHJZEugiu4sTOTrKxY20CL0Hztee1BSRlgKC0qenyFHpn+CxWjxQAAABjUG1G/AJ1juYvhR9UQ4pVsR/QAg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAglXD2OtxAkOUpRFwUeTmmwAAAAACAAAAAAADZgAAwAAAABAAAABMj1cybs1Ex2Okl9Ne234yAAAAAASAAACgAAAAEAAAACW0AUqic1Zy734+9sSGxfqIAAAAbLphZGbX6J81A8LKNQHDc4NYCNJi11ZMk8grK3aqgxLZBsyo0CeYFGF0Wb91/TY1+HJg4CdW5THlmJUdMeEE6HzWP1hE8J3UJRHjPe5yI26Lt75Dvgt42DO+2tIdW1PK7UdmykADG/3apBGAH5XDj2QgL4OOaG2dmU3pRoGld1SDFsxLQa51OxQAAACV66tlCShDgQTrX1nvm9uUr6yOAw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">42</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{8C3A6110-4C83-4EA7-87EA-F1E22086BD89}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{717BC6A8-0A8A-46B1-8A14-FA5F5823D32D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -123,7 +123,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\countries.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\ETLProjectG5\countries.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -320,7 +320,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\HDI_Data.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\ETLProjectG5\HDI_Data.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -635,7 +635,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\world-happiness-report-2021.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\ETLProjectG5\world-happiness-report-2021.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -832,7 +832,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\world-happiness-report.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\ETLProjectG5\ETLProjectG5\world-happiness-report.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
