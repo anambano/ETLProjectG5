@@ -26,10 +26,11 @@ CREATE INDEX ID_HappinessIndex ON HappinessIndex (Country_ID, Assessment_Year);
 
 ALTER TABLE HappinessIndex ADD Ladder_score_in_Dystopia numeric(10, 5);
 
+-- Anupama's part
 ALTER TABLE HappinessIndex ADD HDI_Index numeric(10, 5);
 
-ALTER TABLE HappinessIndex ADD HDI_Index numeric(10, 5);
-
+-- Jyothshna's part
 ALTER TABLE HappinessIndex ADD Avg_Tmp numeric(10, 5);
 
+-- Kendrik's part
 ALTER TABLE HappinessIndex ADD [Total Cases] int;
