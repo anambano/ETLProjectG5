@@ -11,11 +11,49 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{67325DB5-716A-4A7B-A16C-3DD92BB20AAA}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{32584DD0-04CA-4DA0-82B8-74047E16783C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Avg Tmp File Connection Mgr]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{55B73627-BDB7-4853-B9F4-C1821FBEB394}"
+      DTS:ObjectName="Avg Tmp File Connection Mgr">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\ETLProjectG5\Avg_tmp_Data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{0E0AF3B7-4DB4-4D73-9E55-FB9EC42F466A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_tmp"
+              DTS:DTSID="{6C408A24-8850-4267-821F-E483146F1A0A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[CountriesCSV]"
       DTS:CreationName="FLATFILE"
@@ -38,7 +76,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_ID"
-              DTS:DTSID="{E81B0344-733A-457E-9891-A133CD5029B9}"
+              DTS:DTSID="{2B5843EC-A98F-458A-BF01-56223DD5FA9C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +85,44 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country_Name"
-              DTS:DTSID="{99E66456-ECB4-4B5F-B67D-00CEAD604C9D}"
+              DTS:DTSID="{A1B36139-10A4-48A5-8475-5AF895C7F313}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9D560F32-DA96-4917-8202-786ED55B2986}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\ETLProjectG5\coronavirustotalcasedata.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{E4E11D1C-5F35-40EB-9ACB-F60D3E5FA362}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Cases"
+              DTS:DTSID="{647764CD-1B07-4F90-A9E1-29D833F911F0}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -76,7 +151,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country"
-              DTS:DTSID="{8A9D44A5-A7DE-4796-B07E-62A7E94729D3}"
+              DTS:DTSID="{D12EFA89-890E-4121-8889-E5B538A74AEF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +159,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="hdi "
-              DTS:DTSID="{E001C18C-F5C1-49CB-9694-7B177577D8EB}"
+              DTS:DTSID="{145946BD-68BE-4000-BD44-B78B90F89864}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -95,6 +170,16 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{4BAD0FFB-C64B-4E45-998E-1C2EA413F386}"
       DTS:ObjectName="localhost.ETLProjectG5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ETLProjectG5;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.ETLProjectG5 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9F974AEA-BE01-4F5B-8E9C-105848BB7548}"
+      DTS:ObjectName="localhost.ETLProjectG5 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=localhost;Initial Catalog=ETLProjectG5;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
@@ -123,7 +208,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{17C983E2-D24F-4CE6-A31A-A123A799F8FD}"
+              DTS:DTSID="{9B8E1C53-5A4E-4A6B-AD2D-12A79FCC2D4C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +217,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Regional indicator"
-              DTS:DTSID="{8D2730BA-7512-41DD-81EB-84EF95D511CB}"
+              DTS:DTSID="{D51B71FB-B179-488C-BAE9-015A9B428697}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +226,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score"
-              DTS:DTSID="{39B16BF6-D320-4249-9F09-5268AEE4F2FB}"
+              DTS:DTSID="{C77A7F8E-2638-4205-9475-7EE571EADB77}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +235,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Standard error of ladder score"
-              DTS:DTSID="{E1089A05-5CD2-4A75-96CE-8112D5F3A116}"
+              DTS:DTSID="{B42E96CD-03F5-4258-B7F6-42A0923AC79E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +244,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="upperwhisker"
-              DTS:DTSID="{57037A26-CEF2-4605-A401-7DC4C28CF319}"
+              DTS:DTSID="{D3FF9CF7-80CA-4A64-825C-2FE0188540EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +253,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="lowerwhisker"
-              DTS:DTSID="{4134639B-D161-42A7-92B9-A76E7F08B4BF}"
+              DTS:DTSID="{84FF6E7D-3EE1-4009-A923-E42FD0463B1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +262,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Logged GDP per capita"
-              DTS:DTSID="{58C85424-5411-4CC0-9007-F3566C704EE5}"
+              DTS:DTSID="{EC41630A-AC4E-4568-9DAA-BE027A7BC328}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,7 +271,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{D5EBF730-12EF-46A5-928A-79966CA4ED0F}"
+              DTS:DTSID="{EDB9F178-4F81-4875-9B71-11C26FCF6F66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +280,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy"
-              DTS:DTSID="{DD5CBBBC-0EAE-4081-8210-DFD406A5B78B}"
+              DTS:DTSID="{474B6892-A194-4B95-AFA5-82AD4F6A6806}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -204,7 +289,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{18BAFA09-976B-41BB-9BEC-4F8747D599E0}"
+              DTS:DTSID="{C9586FB0-EE2E-46DC-91FC-47E25E90845A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -213,7 +298,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{16931139-1298-4198-BC0C-9E242AF86953}"
+              DTS:DTSID="{19243DFC-458A-44DB-AE51-A21D9D1BE85E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -222,7 +307,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{971712E5-D441-43AB-A322-1A39801AA773}"
+              DTS:DTSID="{9A86769A-B84E-48E8-ABC8-CB37AAE0C36E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -231,7 +316,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score in Dystopia"
-              DTS:DTSID="{D8287E1A-E3A0-4B03-8418-BA8CE1D2495C}"
+              DTS:DTSID="{FD153380-4A1E-4F2A-B13E-68FCF1823544}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -240,7 +325,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Log GDP per capita"
-              DTS:DTSID="{AC8BC2F7-58C9-4D82-BB73-9FAF03309EE0}"
+              DTS:DTSID="{6147582C-0D36-4849-8202-1903F3478489}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -249,7 +334,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Social support"
-              DTS:DTSID="{127548CB-DF74-4B2B-8946-C67607EA1B81}"
+              DTS:DTSID="{F54AECFA-511A-448B-A666-2D9564CFB3B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -258,7 +343,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Healthy life expectancy"
-              DTS:DTSID="{F7A48EC1-ACF3-4150-AECF-5E87A6CCE5D3}"
+              DTS:DTSID="{11193FEB-D128-4E90-A8CA-38F7B30A5D89}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +352,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Freedom to make life choices"
-              DTS:DTSID="{C786BBC0-D6F3-4FAF-A4C2-470973A6F633}"
+              DTS:DTSID="{FAF711A2-2FD4-40EB-8404-01C542BC0CC3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -276,7 +361,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Generosity"
-              DTS:DTSID="{3541C73F-2D34-492F-A201-55E9B296C5E0}"
+              DTS:DTSID="{C3D09A0C-51BF-4D87-88D1-7D74B805F5B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -285,16 +370,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Perceptions of corruption"
-              DTS:DTSID="{FD540094-25D7-40A4-A0E4-04C28EE7BCD1}"
+              DTS:DTSID="{522F2365-3073-41DB-BE3D-03D30BD58F9A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:ColumnDelimiter="_x000A_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dystopia + residual"
-              DTS:DTSID="{4D8130BA-105D-4614-8762-7A1075721D60}"
+              DTS:DTSID="{10FBA563-01E5-476D-B33E-08FFA8BF39E7}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -323,7 +408,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{68A8EA37-D889-459A-BE16-CE13EFC6E3D0}"
+              DTS:DTSID="{6372C909-9C56-43BE-B45E-121C6DCA6814}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -331,7 +416,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="year"
-              DTS:DTSID="{809633C2-EC31-4006-8A32-9C74DB37B588}"
+              DTS:DTSID="{0022D2A8-79CD-42E6-BD10-F2F04C498BF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -340,7 +425,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Life Ladder"
-              DTS:DTSID="{28A3E249-1012-4BE3-B17F-60A8A1CFF1C9}"
+              DTS:DTSID="{3E8894A9-B8EF-4982-9611-32AB54955C44}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -349,7 +434,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Log GDP per capita"
-              DTS:DTSID="{FCEB53E3-231B-4AB9-BB3F-DBB18E76888B}"
+              DTS:DTSID="{0EEF35F0-498F-4795-A2F4-3D8AA6D2723B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -358,7 +443,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{F884969B-B0CB-47EB-8935-D23EFA2B2CD6}"
+              DTS:DTSID="{81A92203-7687-4E49-A4B5-FC686E37485F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -367,7 +452,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy at birth"
-              DTS:DTSID="{0114A5F7-F986-4167-8F70-0F317BFA4B64}"
+              DTS:DTSID="{BFF46549-777A-4324-9EBC-959C4A75CD53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -376,7 +461,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{17BF5D11-E6D4-4C26-948A-7A7882547D05}"
+              DTS:DTSID="{2E1A396F-760D-4940-8DEA-F46E6EA5B39C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -385,7 +470,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{8971A896-4A18-4D62-8237-D6FD9B30F01A}"
+              DTS:DTSID="{9CDCC3C5-F12B-4791-8754-0E947727D3C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -394,7 +479,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{7178EA74-0E21-4A52-864A-624DB3AD51EB}"
+              DTS:DTSID="{D17A0849-793F-4E34-B9A0-5933D65F3209}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -403,16 +488,16 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Positive affect"
-              DTS:DTSID="{44B7C9D9-A299-43F6-A05F-53B6B7332EC5}"
+              DTS:DTSID="{CC09FB95-6F8F-4A7F-8380-4B3ACEF4B918}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:ColumnDelimiter="_x000A_"
               DTS:DataType="131"
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Negative affect"
-              DTS:DTSID="{17305E77-E1B2-4ECD-8472-1FBD05892FEB}"
+              DTS:DTSID="{16CB0216-78F8-4FCA-B92A-3800CCF7F621}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -421,6 +506,467 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Avg Tmp(Jyothshna)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AC24F6D9-7133-4FF2-99AA-BF6BD62E9CBD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Avg Tmp(Jyothshna)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Avg Tmp Flat file source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Avg Tmp File Connection Mgr]"
+                  connectionManagerRefId="Package.ConnectionManagers[Avg Tmp File Connection Mgr]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[country]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[Avg_tmp]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].ExternalColumns[Avg_tmp]"
+                      length="50"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[Avg_tmp]"
+                      name="Avg_tmp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].ExternalColumns[Avg_tmp]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Avg_tmp" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Avg Tmp(Jyothshna)\Country Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Country Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select refTable.*, 2021 as AYear from (select * from [dbo].[Countries]) as refTable</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select refTable.*, 2021 as AYear from (select * from [dbo].[Countries]) as refTable) [refTable]
+where [refTable].[Country_Name] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Country_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Country_Name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[country]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Inputs[Lookup Input].Columns[country]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Country_Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Avg Tmp(Jyothshna)\Country Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      name="Country_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Country_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]"
+                      name="AYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AYear</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Avg Tmp(Jyothshna)\Country Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Avg Tmp(Jyothshna)\Country Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Avg Tmp(Jyothshna)\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Update HappinessIndex
+set Avg_Tmp = ?
+Where Country_ID = ?
+And Assessment_Year = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].Columns[Avg_tmp]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Avg_tmp"
+                      externalMetadataColumnId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output].Columns[Avg_tmp]" />
+                    <inputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].Columns[Country_ID]"
+                      cachedDataType="i4"
+                      cachedName="Country_ID"
+                      externalMetadataColumnId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
+                    <inputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].Columns[AYear]"
+                      cachedDataType="i4"
+                      cachedName="AYear"
+                      externalMetadataColumnId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="numeric"
+                      name="Param_0"
+                      precision="10"
+                      scale="5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i2"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i2"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Avg Tmp(Jyothshna).Paths[Flat File Source Output]"
+              endId="Package\Avg Tmp(Jyothshna)\Country Lookup.Inputs[Lookup Input]"
+              name="Flat File Source Output"
+              startId="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Avg Tmp(Jyothshna).Paths[Lookup Match Output]"
+              endId="Package\Avg Tmp(Jyothshna)\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Avg Tmp(Jyothshna)\Country Lookup.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Clean All Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -436,6 +982,518 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4BAD0FFB-C64B-4E45-998E-1C2EA413F386}"
           SQLTask:SqlStatementSource="delete from Countries;&#xA;delete from HappinessIndex;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Coronavirus Cases (Kendrick)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{80D866B5-285B-4F86-873C-E5120DAFAFF8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Coronavirus Cases (Kendrick)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Coronavirus Cases Extract"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].Columns[Total Cases]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].ExternalColumns[Total Cases]"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].Columns[Total Cases]"
+                      name="Total Cases"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].ExternalColumns[Total Cases]"
+                      dataType="r4"
+                      name="Total Cases" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Coronavirus Cases (Kendrick)\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Countries]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Countries]) [refTable]
+where [refTable].[Country_Name] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Country_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Country_Name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].Columns[Country]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Coronavirus Cases (Kendrick)\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Coronavirus Cases (Kendrick)\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Lookup.Inputs[Lookup Input].Columns[Country]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output].Columns[Country]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Country_Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Coronavirus Cases (Kendrick)\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output].Columns[Country_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output].Columns[Country_Name]"
+                      name="Country_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Country_Name</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output].Columns[Country_ID]"
+                      name="Country_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Country_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Coronavirus Cases (Kendrick)\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Coronavirus Cases (Kendrick)\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HappinessIndex]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ETLProjectG5]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country_ID]"
+                      cachedDataType="i4"
+                      cachedName="Country_ID"
+                      externalMetadataColumnId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country_ID]"
+                      dataType="i2"
+                      name="Country_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assessment_Year]"
+                      dataType="i2"
+                      name="Assessment_Year" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
+                      dataType="numeric"
+                      name="Life_Ladder"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
+                      dataType="numeric"
+                      name="Log_GDP_per_capita"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
+                      dataType="numeric"
+                      name="Social_support"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
+                      dataType="numeric"
+                      name="Healthy_life_expectancy_at_birth"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      dataType="numeric"
+                      name="Freedom_to_make_life_choices"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
+                      dataType="numeric"
+                      name="Generosity"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      dataType="numeric"
+                      name="Perceptions_of_corruption"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Positive_affect]"
+                      dataType="numeric"
+                      name="Positive_affect"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Negative_affect]"
+                      dataType="numeric"
+                      name="Negative_affect"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ladder_score_in_Dystopia]"
+                      dataType="numeric"
+                      name="Ladder_score_in_Dystopia"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HDI_Index]"
+                      dataType="numeric"
+                      name="HDI_Index"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Tmp]"
+                      dataType="numeric"
+                      name="Avg_Tmp"
+                      precision="10"
+                      scale="5" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Coronavirus Cases (Kendrick).Paths[Flat File Source Output]"
+              endId="Package\Coronavirus Cases (Kendrick)\Lookup.Inputs[Lookup Input]"
+              name="Flat File Source Output"
+              startId="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Coronavirus Cases (Kendrick).Paths[Lookup Match Output]"
+              endId="Package\Coronavirus Cases (Kendrick)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Coronavirus Cases (Kendrick)\Lookup.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1456,6 +2514,12 @@ where [refTable].[Country_Name] = ?</property>
                       name="HDI_Index"
                       precision="10"
                       scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Tmp]"
+                      dataType="numeric"
+                      name="Avg_Tmp"
+                      precision="10"
+                      scale="5" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1903,6 +2967,12 @@ where [refTable].[Country_Name] = ?</property>
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[HDI_Index]"
                       dataType="numeric"
                       name="HDI_Index"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Tmp]"
+                      dataType="numeric"
+                      name="Avg_Tmp"
                       precision="10"
                       scale="5" />
                   </externalMetadataColumns>
@@ -2897,17 +3967,17 @@ And Assessment_Year = ?</property>
                       externalMetadataColumnId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Extract HDI (Anupama)\HDI Flat File Source.Outputs[Flat File Source Output].Columns[hdi ]" />
                     <inputColumn
-                      refId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].Columns[Country_ID]"
-                      cachedDataType="i4"
-                      cachedName="Country_ID"
-                      externalMetadataColumnId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Extract HDI (Anupama)\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
-                    <inputColumn
                       refId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].Columns[AYear]"
                       cachedDataType="i4"
                       cachedName="AYear"
                       externalMetadataColumnId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Extract HDI (Anupama)\Country Lookup.Outputs[Lookup Match Output].Columns[AYear]" />
+                    <inputColumn
+                      refId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].Columns[Country_ID]"
+                      cachedDataType="i4"
+                      cachedName="Country_ID"
+                      externalMetadataColumnId="Package\Extract HDI (Anupama)\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Extract HDI (Anupama)\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3031,6 +4101,22 @@ And Assessment_Year = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Extract HDI (Anupama)" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{D631E590-D053-4BD5-829E-A3975377596E}"
+      DTS:From="Package\Extract HDI (Anupama)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Avg Tmp(Jyothshna)" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{5D3050D5-0A6A-419D-A58A-C5BB7E7BF73B}"
+      DTS:From="Package\Avg Tmp(Jyothshna)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Coronavirus Cases (Kendrick)" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -3045,9 +4131,17 @@ And Assessment_Year = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162.4,41.6"
+          Size="176.8,41.6"
+          Id="Package\Avg Tmp(Jyothshna)"
+          TopLeft="238.261894847396,428.933336322573" />
+        <NodeLayout
+          Size="161.6,41.6"
           Id="Package\Clean All Data"
           TopLeft="240.714289813626,16.0588237546308" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\Coronavirus Cases (Kendrick)"
+          TopLeft="216.428570942003,510.05882357231" />
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Extract Countries"
@@ -3132,18 +4226,62 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="325.571432378828,312.305886149489">
+          TopLeft="325.571432378828,312.705886149489">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.576471810852"
+              EndConnector="0,45.176471810852"
               Start="0,0"
-              End="0,38.076471810852">
+              End="0,37.676471810852">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.076471810852" />
+                    End="0,37.676471810852" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="326.959520835036,399.482357960341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.450978362232"
+              Start="0,0"
+              End="0,21.950978362232">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.950978362232" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="325.745232894699,470.533336322573">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.5254872497375"
+              Start="0,0"
+              End="0,32.0254872497375">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.0254872497375" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3156,17 +4294,208 @@ And Assessment_Year = ?</property>
           Text="Team: ETL Group 5&#xA;Members: Anupama, Jyothshna, Kendrick, Prit"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="269.6,56"
+          Size="270.4,56"
           Id="3cd7109f-4011-4cb0-b70f-541db9bd4dce"
           TopLeft="472.857150909852,10.7058825030871" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
+    design-time-name="Package\Avg Tmp(Jyothshna)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Avg Tmp(Jyothshna)\Country Lookup"
+          TopLeft="388,109" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Avg Tmp(Jyothshna)\OLE DB Command"
+          TopLeft="379,191" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Avg Tmp(Jyothshna)\Avg Tmp Flat file source"
+          TopLeft="371,31" />
+        <EdgeLayout
+          Id="Package\Avg Tmp(Jyothshna).Paths[Lookup Match Output]"
+          TopLeft="463.3,150.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.4"
+              Start="0,0"
+              End="0,32.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.6453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Avg Tmp(Jyothshna).Paths[Flat File Source Output]"
+          TopLeft="465.1,72.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.4"
+              Start="0,0"
+              End="0,28.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Avg Tmp(Jyothshna)\Country Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Coronavirus Cases (Kendrick)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="200.8,56.8"
+          Id="Package\Coronavirus Cases (Kendrick)\Lookup"
+          TopLeft="347.272727272727,126.636363636364" />
+        <NodeLayout
+          Size="200.8,56.8"
+          Id="Package\Coronavirus Cases (Kendrick)\OLE DB Destination"
+          TopLeft="347.272727272727,229.636363636364" />
+        <NodeLayout
+          Size="200.8,56.8"
+          Id="Package\Coronavirus Cases (Kendrick)\Coronavirus Cases Extract"
+          TopLeft="347.272727272727,43.6363636363637" />
+        <EdgeLayout
+          Id="Package\Coronavirus Cases (Kendrick).Paths[Lookup Match Output]"
+          TopLeft="447.772727272727,183.636363636364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Coronavirus Cases (Kendrick).Paths[Flat File Source Output]"
+          TopLeft="447.772727272727,100.636363636364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Coronavirus Cases (Kendrick)\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Countries]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Coronavirus Cases (Kendrick)\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Extract Countries">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Extract Countries\Country OLE DB Destination"
@@ -3194,9 +4523,7 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3275,9 +4602,7 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3296,15 +4621,34 @@ And Assessment_Year = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Happiness Index\Country ID Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract Happiness Index 2021">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="174.4,43.2"
-          Id="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader"
-          TopLeft="196.666666666667,41.6666666666667" />
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Extract Happiness Index 2021\Country Lookup"
@@ -3313,6 +4657,10 @@ And Assessment_Year = ?</property>
           Size="170.4,41.6"
           Id="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest"
           TopLeft="198.809523846017,219.078433860682" />
+        <NodeLayout
+          Size="174.4,43.2"
+          Id="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader"
+          TopLeft="196.666666666667,40.6666666666667" />
         <EdgeLayout
           Id="Package\Extract Happiness Index 2021.Paths[Lookup Match Output]"
           TopLeft="283.538095341491,171.207844370597">
@@ -3339,31 +4687,42 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract Happiness Index 2021.Paths[Flat File Source Output]"
-          TopLeft="283.466666751816,84.8666666666667">
+          TopLeft="283.466666751816,83.8666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.74117770393"
+              EndConnector="0,45.7411777039303"
               Start="0,0"
-              End="0,37.24117770393">
+              End="0,38.2411777039303">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.24117770393" />
+                    End="0,38.2411777039303" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract HDI (Anupama)">
     <LayoutInfo>
