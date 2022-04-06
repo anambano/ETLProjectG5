@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="75"
-  DTS:VersionGUID="{849FEACA-F9E4-4822-979B-D0889F441EFF}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{9D438CC0-0C78-47A9-9A8D-CE7E39AF66E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -199,7 +199,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{1F330FCE-2B3D-4226-B428-38B439DEBCB9}"
+              DTS:DTSID="{D7FDF210-9AB9-4361-8058-AD5E17CFA54E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -208,169 +208,151 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Regional indicator"
-              DTS:DTSID="{75A0C6A2-EAF2-4FA9-B119-7980B3276C06}"
+              DTS:DTSID="{5478A9A7-6B97-4D6D-B94B-7BA66340309F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score"
-              DTS:DTSID="{FE9B2499-858E-4400-A147-BAC7952DBAF0}"
+              DTS:DTSID="{948F7A59-A9E7-4EA6-AAFC-2481C97B9FD6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Standard error of ladder score"
-              DTS:DTSID="{8FA2219F-59BE-4FCC-ACFB-4808957A6E08}"
+              DTS:DTSID="{E43C1EFF-A868-4A93-8491-D99D4BD68480}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="upperwhisker"
-              DTS:DTSID="{E89BB839-A50D-4320-97D7-C3D5C141D02D}"
+              DTS:DTSID="{2BF3097F-7269-45C1-B060-F61E081F403B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="lowerwhisker"
-              DTS:DTSID="{DA1B6254-4783-479A-866C-F0C30433C53D}"
+              DTS:DTSID="{704BEF23-FD03-4F2B-8C51-1685A592063D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Logged GDP per capita"
-              DTS:DTSID="{E942A99E-D035-483F-8457-955126C459EB}"
+              DTS:DTSID="{D1AC56AB-06B2-4018-AABD-32799BD32450}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{8D19F148-ABF9-4A66-A65A-68CB4AE373AC}"
+              DTS:DTSID="{4E43647E-C390-484A-A156-5567E5BA63F8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy"
-              DTS:DTSID="{788CE976-37B6-4B05-B507-350D3E4CD225}"
+              DTS:DTSID="{35DD4696-CD2B-4083-A2EB-E74B08865EF6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{71CC8BBA-D34B-4A80-A9AE-648F77644127}"
+              DTS:DTSID="{978E382B-9354-4B05-AC4D-EE63E4649396}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{8005D984-DC7C-4A03-B49A-80D042D372AB}"
+              DTS:DTSID="{2B5B99BE-EFE8-4AC5-A2FD-638B8C17889B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{7C0CEAD1-4BAF-4DC3-A3B4-2DFBA931FFBC}"
+              DTS:DTSID="{B0A9F7BA-21F4-4BB2-AF6F-0FE3EA2F047F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Ladder score in Dystopia"
-              DTS:DTSID="{5188B3DE-6FD6-4775-B4A2-0FDF93482E0F}"
+              DTS:DTSID="{32DC7D4B-116A-4CC1-9DC2-8BFE0064B4B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Log GDP per capita"
-              DTS:DTSID="{934546E9-3F64-4E22-9AFB-B311D94B0C8D}"
+              DTS:DTSID="{B0D69318-35B9-4272-918C-2000AF070FFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Social support"
-              DTS:DTSID="{FF9368B7-7530-49F2-9C73-92AF74DEE0D6}"
+              DTS:DTSID="{2A5DE849-8BB5-4C7B-8BF5-D4CAAD76A9E8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Healthy life expectancy"
-              DTS:DTSID="{DCADBDFB-9A9C-4CF8-9E5D-FF8A23D3C5B6}"
+              DTS:DTSID="{54C8F478-BEA0-46E1-A4C3-679DE2AAD08B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Freedom to make life choices"
-              DTS:DTSID="{E157C780-A366-4AC9-AD3D-19D51C521249}"
+              DTS:DTSID="{46EB0725-3A80-4BD6-B00C-467CAC102320}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Generosity"
-              DTS:DTSID="{04A5E9AD-71BC-41DC-BAA9-F058832CFA1D}"
+              DTS:DTSID="{BC91BB41-EBD6-4AD2-91EC-6D01A8FE01D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Explained by  Perceptions of corruption"
-              DTS:DTSID="{A63CA40A-6BD5-46F2-9B29-BEB34AF3B5F0}"
+              DTS:DTSID="{A91E8A15-96E3-4147-B852-1107999BE9C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Dystopia + residual"
-              DTS:DTSID="{6066861C-E781-45CB-B335-DA468103A4EC}"
+              DTS:DTSID="{E650CA1F-9B4F-4D90-9047-05D8407F9327}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -399,7 +381,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country name"
-              DTS:DTSID="{35896708-859F-4179-84F3-7A6224182686}"
+              DTS:DTSID="{2771999D-1E23-4515-BECC-517BCC17404E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -407,88 +389,79 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="year"
-              DTS:DTSID="{F6490916-442E-4635-82EC-5F3FE3F724F0}"
+              DTS:DTSID="{D5922830-C95F-48E2-90F6-369C29EE8E8E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Life Ladder"
-              DTS:DTSID="{0C027CC5-3EA9-42B9-AF42-A922B3520F32}"
+              DTS:DTSID="{88FE1DD6-5D8B-4096-B03A-8F85A5129E4C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Log GDP per capita"
-              DTS:DTSID="{1A5A3FAB-0D59-4EC0-BC23-9FA57DDA6844}"
+              DTS:DTSID="{53148883-598C-446A-84DF-EB8C6EBE8FED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Social support"
-              DTS:DTSID="{E164628E-9911-4EDF-B2A5-5F8F72CBD5EE}"
+              DTS:DTSID="{E2CEAE97-C3DC-4212-9065-807BBCB374B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Healthy life expectancy at birth"
-              DTS:DTSID="{F5F1684D-301B-4405-89B7-E247D08E63AF}"
+              DTS:DTSID="{038009F5-F2AB-4543-A53A-6DFEDF5E2342}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Freedom to make life choices"
-              DTS:DTSID="{757E90EB-1599-45DE-A71C-4F878F2E1CFA}"
+              DTS:DTSID="{BEFEC3C6-26E5-49BD-8D69-B05113553C28}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Generosity"
-              DTS:DTSID="{1B72A768-03E8-4171-86BA-837726F70881}"
+              DTS:DTSID="{E4A12737-81B6-48F1-82AD-3772787E0F8F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Perceptions of corruption"
-              DTS:DTSID="{39E2998E-33E9-46DD-B2E5-B16D903CE075}"
+              DTS:DTSID="{15087196-A623-46DC-8D84-3185AE872BD5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Positive affect"
-              DTS:DTSID="{403A12EA-CB5C-4C04-8598-5EEDE0642C5C}"
+              DTS:DTSID="{BE7D604C-F9DC-4AF5-B387-49C2D9D1E578}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000A_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Negative affect"
-              DTS:DTSID="{2B93DDC5-5E25-4278-A406-B1454B713E52}"
+              DTS:DTSID="{88598972-23C4-4FC7-9506-6239E6BCF038}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1493,13 +1466,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Life Ladder]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Life Ladder]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Life Ladder]"
                       name="Life Ladder"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1514,13 +1486,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Log GDP per capita]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Log GDP per capita]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Log GDP per capita]"
                       name="Log GDP per capita"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1535,13 +1506,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Social support]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Social support]"
                       name="Social support"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1556,13 +1526,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy at birth]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy at birth]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy at birth]"
                       name="Healthy life expectancy at birth"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1577,13 +1546,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
                       name="Freedom to make life choices"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1598,13 +1566,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Generosity]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Generosity]"
                       name="Generosity"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1619,13 +1586,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
                       name="Perceptions of corruption"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1640,13 +1606,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Positive affect]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Positive affect]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Positive affect]"
                       name="Positive affect"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1661,13 +1626,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Negative affect]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Negative affect]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Negative affect]"
                       name="Negative affect"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1695,49 +1659,40 @@ where [refTable].[Country_Name] = ?</property>
                       name="year" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Life Ladder]"
-                      dataType="numeric"
-                      name="Life Ladder"
-                      precision="18" />
+                      dataType="r8"
+                      name="Life Ladder" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Log GDP per capita]"
-                      dataType="numeric"
-                      name="Log GDP per capita"
-                      precision="18" />
+                      dataType="r8"
+                      name="Log GDP per capita" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
-                      dataType="numeric"
-                      name="Social support"
-                      precision="18" />
+                      dataType="r8"
+                      name="Social support" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy at birth]"
-                      dataType="numeric"
-                      name="Healthy life expectancy at birth"
-                      precision="18" />
+                      dataType="r8"
+                      name="Healthy life expectancy at birth" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
-                      dataType="numeric"
-                      name="Freedom to make life choices"
-                      precision="18" />
+                      dataType="r8"
+                      name="Freedom to make life choices" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
-                      dataType="numeric"
-                      name="Generosity"
-                      precision="18" />
+                      dataType="r8"
+                      name="Generosity" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
-                      dataType="numeric"
-                      name="Perceptions of corruption"
-                      precision="18" />
+                      dataType="r8"
+                      name="Perceptions of corruption" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Positive affect]"
-                      dataType="numeric"
-                      name="Positive affect"
-                      precision="18" />
+                      dataType="r8"
+                      name="Positive affect" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].ExternalColumns[Negative affect]"
-                      dataType="numeric"
-                      name="Negative affect"
-                      precision="18" />
+                      dataType="r8"
+                      name="Negative affect" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1843,9 +1798,8 @@ where [refTable].[Country_Name] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Generosity]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Generosity"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Generosity]" />
                     <inputColumn
@@ -1856,58 +1810,50 @@ where [refTable].[Country_Name] = ?</property>
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[year]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Life Ladder]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Life Ladder"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Life Ladder]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Log GDP per capita]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Log GDP per capita"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Log GDP per capita]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Social support]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Social support"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Social support]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Healthy life expectancy at birth]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Healthy life expectancy at birth"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy at birth]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Freedom to make life choices]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Freedom to make life choices"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Perceptions of corruption]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Perceptions of corruption"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Positive affect]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Positive affect"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Positive_affect]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Positive affect]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Negative affect]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Negative affect"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index\Happiness OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Negative_affect]"
                       lineageId="Package\Extract Happiness Index\Happiness Index Loader.Outputs[Flat File Source Output].Columns[Negative affect]" />
                     <inputColumn
@@ -2315,9 +2261,8 @@ where [refTable].[Country_Name] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Generosity]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Generosity"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Generosity]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Generosity]" />
                     <inputColumn
@@ -2328,51 +2273,44 @@ where [refTable].[Country_Name] = ?</property>
                       lineageId="Package\Extract Happiness Index 2021\Country Lookup.Outputs[Lookup Match Output].Columns[Country_ID]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Ladder score]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Ladder score"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Life_Ladder]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Logged GDP per capita]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Logged GDP per capita"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Log_GDP_per_capita]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Logged GDP per capita]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Social support]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Social support"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Social_support]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Social support]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Healthy life expectancy]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Healthy life expectancy"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Healthy_life_expectancy_at_birth]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Freedom to make life choices]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Freedom to make life choices"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Perceptions of corruption]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Perceptions of corruption"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Perceptions_of_corruption]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]" />
                     <inputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].Columns[Ladder score in Dystopia]"
-                      cachedDataType="numeric"
+                      cachedDataType="r8"
                       cachedName="Ladder score in Dystopia"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness 2021 OLE DB Dest.Inputs[OLE DB Destination Input].ExternalColumns[Ladder_score_in_Dystopia]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score in Dystopia]" />
                     <inputColumn
@@ -2579,13 +2517,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score]"
                       name="Ladder score"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2600,13 +2537,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Standard error of ladder score]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Standard error of ladder score]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Standard error of ladder score]"
                       name="Standard error of ladder score"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2621,13 +2557,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[upperwhisker]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[upperwhisker]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[upperwhisker]"
                       name="upperwhisker"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2642,13 +2577,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[lowerwhisker]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[lowerwhisker]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[lowerwhisker]"
                       name="lowerwhisker"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2663,13 +2597,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Logged GDP per capita]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Logged GDP per capita]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Logged GDP per capita]"
                       name="Logged GDP per capita"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2684,13 +2617,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Social support]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Social support]"
                       name="Social support"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2705,13 +2637,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Healthy life expectancy]"
                       name="Healthy life expectancy"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2726,13 +2657,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
                       name="Freedom to make life choices"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2747,13 +2677,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Generosity]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Generosity]"
                       name="Generosity"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2768,13 +2697,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
                       name="Perceptions of corruption"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2789,13 +2717,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score in Dystopia]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score in Dystopia]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Ladder score in Dystopia]"
                       name="Ladder score in Dystopia"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2810,13 +2737,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Log GDP per capita]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Log GDP per capita]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Log GDP per capita]"
                       name="Explained by  Log GDP per capita"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2831,13 +2757,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Social support]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Social support]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Social support]"
                       name="Explained by  Social support"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2852,13 +2777,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Healthy life expectancy]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Healthy life expectancy]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Healthy life expectancy]"
                       name="Explained by  Healthy life expectancy"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2873,13 +2797,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Freedom to make life choices]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Freedom to make life choices]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Freedom to make life choices]"
                       name="Explained by  Freedom to make life choices"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2894,13 +2817,12 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Generosity]"
-                      dataType="numeric"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Generosity]"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Generosity]"
                       name="Explained by  Generosity"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2915,12 +2837,10 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Perceptions of corruption]"
-                      codePage="65001"
-                      dataType="str"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Perceptions of corruption]"
-                      length="50"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Explained by  Perceptions of corruption]"
                       name="Explained by  Perceptions of corruption"
                       truncationRowDisposition="FailComponent">
@@ -2937,12 +2857,10 @@ where [refTable].[Country_Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Dystopia + residual]"
-                      codePage="65001"
-                      dataType="str"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Dystopia + residual]"
-                      length="50"
                       lineageId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].Columns[Dystopia + residual]"
                       name="Dystopia + residual"
                       truncationRowDisposition="FailComponent">
@@ -2974,95 +2892,75 @@ where [refTable].[Country_Name] = ?</property>
                       name="Regional indicator" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score]"
-                      dataType="numeric"
-                      name="Ladder score"
-                      precision="18" />
+                      dataType="r8"
+                      name="Ladder score" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Standard error of ladder score]"
-                      dataType="numeric"
-                      name="Standard error of ladder score"
-                      precision="18" />
+                      dataType="r8"
+                      name="Standard error of ladder score" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[upperwhisker]"
-                      dataType="numeric"
-                      name="upperwhisker"
-                      precision="18" />
+                      dataType="r8"
+                      name="upperwhisker" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[lowerwhisker]"
-                      dataType="numeric"
-                      name="lowerwhisker"
-                      precision="18" />
+                      dataType="r8"
+                      name="lowerwhisker" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Logged GDP per capita]"
-                      dataType="numeric"
-                      name="Logged GDP per capita"
-                      precision="18" />
+                      dataType="r8"
+                      name="Logged GDP per capita" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Social support]"
-                      dataType="numeric"
-                      name="Social support"
-                      precision="18" />
+                      dataType="r8"
+                      name="Social support" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy]"
-                      dataType="numeric"
-                      name="Healthy life expectancy"
-                      precision="18" />
+                      dataType="r8"
+                      name="Healthy life expectancy" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
-                      dataType="numeric"
-                      name="Freedom to make life choices"
-                      precision="18" />
+                      dataType="r8"
+                      name="Freedom to make life choices" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
-                      dataType="numeric"
-                      name="Generosity"
-                      precision="18" />
+                      dataType="r8"
+                      name="Generosity" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
-                      dataType="numeric"
-                      name="Perceptions of corruption"
-                      precision="18" />
+                      dataType="r8"
+                      name="Perceptions of corruption" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Ladder score in Dystopia]"
-                      dataType="numeric"
-                      name="Ladder score in Dystopia"
-                      precision="18" />
+                      dataType="r8"
+                      name="Ladder score in Dystopia" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Log GDP per capita]"
-                      dataType="numeric"
-                      name="Explained by  Log GDP per capita"
-                      precision="18" />
+                      dataType="r8"
+                      name="Explained by  Log GDP per capita" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Social support]"
-                      dataType="numeric"
-                      name="Explained by  Social support"
-                      precision="18" />
+                      dataType="r8"
+                      name="Explained by  Social support" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Healthy life expectancy]"
-                      dataType="numeric"
-                      name="Explained by  Healthy life expectancy"
-                      precision="18" />
+                      dataType="r8"
+                      name="Explained by  Healthy life expectancy" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Freedom to make life choices]"
-                      dataType="numeric"
-                      name="Explained by  Freedom to make life choices"
-                      precision="18" />
+                      dataType="r8"
+                      name="Explained by  Freedom to make life choices" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Generosity]"
-                      dataType="numeric"
-                      name="Explained by  Generosity"
-                      precision="18" />
+                      dataType="r8"
+                      name="Explained by  Generosity" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Explained by  Perceptions of corruption]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      dataType="r8"
                       name="Explained by  Perceptions of corruption" />
                     <externalMetadataColumn
                       refId="Package\Extract Happiness Index 2021\Happiness Index 2021 Loader.Outputs[Flat File Source Output].ExternalColumns[Dystopia + residual]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
+                      dataType="r8"
                       name="Dystopia + residual" />
                   </externalMetadataColumns>
                 </output>
@@ -4093,34 +3991,34 @@ And Assessment_Year = ?</property>
         <NodeLayout
           Size="176,41.6"
           Id="Package\Avg Tmp(Jyothshna)"
-          TopLeft="233.928561457296,355.861439872931" />
+          TopLeft="300.357134017139,355.861439872931" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Clean All Data"
-          TopLeft="236.428575454927,14.5294119684755" />
+          TopLeft="302.85714801477,14.5294119684755" />
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Extract Countries"
-          TopLeft="238.650797714992,82.5032691309334" />
+          TopLeft="305.079370274835,82.5032691309334" />
         <NodeLayout
           Size="192.8,41.6"
           Id="Package\Extract Happiness Index"
-          TopLeft="226.666670526777,149.88235504322" />
+          TopLeft="293.09524308662,149.88235504322" />
         <NodeLayout
           Size="219.2,41.6"
           Id="Package\Extract Happiness Index 2021"
-          TopLeft="214.285717934979,218.026146848584" />
+          TopLeft="280.714290494822,218.026146848584" />
         <NodeLayout
           Size="220,41.6"
           Id="Package\Extract HDI (Anupama)"
-          TopLeft="213.809527450679,290.758174012414" />
+          TopLeft="280.238100010522,290.758174012414" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Population (Prit)"
-          TopLeft="238.492053835031,421.981702199131" />
+          TopLeft="304.920626394874,421.981702199131" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="320.658734120885,124.103269130933">
+          TopLeft="387.087306680728,124.103269130933">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4142,7 +4040,7 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="323.476194230878,191.48235504322">
+          TopLeft="389.904766790721,191.48235504322">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4164,7 +4062,7 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="317.939686584959,56.1294119684755">
+          TopLeft="384.368259144803,56.1294119684755">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4186,7 +4084,7 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="323.847622692829,259.626146848584">
+          TopLeft="390.276195252672,259.626146848584">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4208,7 +4106,7 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="322.869044453988,332.358174012414">
+          TopLeft="389.297617013831,332.358174012414">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4230,7 +4128,7 @@ And Assessment_Year = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="323.210307646163,397.461439872931">
+          TopLeft="389.638880206006,397.461439872931">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4256,7 +4154,7 @@ And Assessment_Year = ?</property>
           FontInfo="{assembly:Null}"
           Size="269.6,56"
           Id="3cd7109f-4011-4cb0-b70f-541db9bd4dce"
-          TopLeft="472.857150909852,10.7058825030871" />
+          TopLeft="539.285723469695,10.7058825030871" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4320,9 +4218,7 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4355,7 +4251,7 @@ And Assessment_Year = ?</property>
     design-time-name="Package\Extract Countries">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Extract Countries\Country OLE DB Destination"
@@ -4383,9 +4279,7 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4645,9 +4539,7 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4760,7 +4652,9 @@ And Assessment_Year = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
