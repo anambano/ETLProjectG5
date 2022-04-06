@@ -34,3 +34,6 @@ ALTER TABLE HappinessIndex ADD Avg_Tmp numeric(10, 5);
 
 -- Kendrik's part
 ALTER TABLE HappinessIndex ADD [Total Cases] int;
+
+-- Prit's part
+ALTER TABLE HappinessIndex ADD Population numeric(15, 5);
